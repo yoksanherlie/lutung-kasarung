@@ -1,0 +1,59 @@
+.rotate-left {
+    transform: rotateY(180deg);
+}
+
+.rotate-right {
+    transform: rotateY(-180deg);
+}
+
+.rotate-up {
+    transform: rotateX(180deg);
+}
+
+.rotate-down {
+    transform: rotateX(-180deg);
+}
+
+.text-center {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.narration-text {
+    color: white;
+    font-family: PermanentMarker;
+    letter-spacing: 2px;
+}
+
+.narration-sub-text {
+    color: white;
+    font-family: KidKnowledge;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.chat-text {
+    color: #2f4962;
+    font-family: PermanentMarker;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.chat-cloud-a .chat-text {
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    font-size: 14px;
+}
+
+.cloud-info .chat-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 14px;
+}
