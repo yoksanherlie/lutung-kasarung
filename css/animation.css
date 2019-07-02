@@ -41,3 +41,13 @@
         opacity: 1;
     }
 }
+
+/* guruminda special animation */
+@keyframes guruminda {
+    0% { transform: translateX(-50%) rotate(-20deg); }
+    100% { transform: translateX(-50%) rotate(20deg); }
+}
+
+#falling-guruminda.animated {
+    animation: guruminda .7s infinite alternate;
+}

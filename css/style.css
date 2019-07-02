@@ -446,3 +446,260 @@ body {
     bottom: -50px;
     right: -50px;
 }
+
+/* SCENE B */
+
+#scene-b-parent {
+    position: relative;
+}
+
+#show-curve {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+}
+
+/*  scene 1 b 1 */
+#falling-guruminda {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+.info-1-b-1 {
+    right: 440px;
+    top: 45%;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 9999;
+}
+
+@keyframes rainAppear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.green-rain {
+    width: 100%;
+    top: 50px;
+    left: -50px;
+    opacity: 0;
+}
+
+.yellow-rain {
+    width: 100%;
+    opacity: 0;
+}
+
+.thunder-1 {
+    right: 200px;
+    top: 7%;
+    opacity: 0;
+}
+
+.thunder-2 {
+    left: 400px;
+    top: 50%;
+    transform: translateY(-60%);
+    opacity: 0;
+}
+
+.thunder-3 {
+    left: 350px;
+    top: 8%;
+    opacity: 0;
+}
+
+.green-rain.animate-appear,
+.yellow-rain.animate-appear,
+.thunder-1.animate-appear,
+.thunder-2.animate-appear,
+.thunder-3.animate-appear {
+    animation: rainAppear .3s infinite forwards alternate;
+}
+
+.yellow-rain.animate-appear { animation-duration: .6s; }
+.thunder-1.animate-appear { animation-duration: .9s; }
+.thunder-2.animate-appear { animation-duration: .6s; }
+.thunder-3.animate-appear { animation-duration: .6s; }
+
+.b-1-clouds {
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 99;
+}
+
+.b-1-clouds.animated {
+    animation: moveClouds 2s infinite alternate;
+}
+
+@keyframes moveClouds {
+    0% { transform: translateX(-50px); }
+    100% { transform: translateX(50px); }
+}
+
+.b-1-clouds > div {
+    position: absolute;
+}
+
+.b-1-clouds .b-1-clouds-blue {
+    right: -110px;
+    bottom: -80px;
+}
+
+.b-1-clouds .white-cloud-b {
+    right: -150px;
+    bottom: -200px;
+}
+
+.b-1-clouds .green-cloud-b {
+    right: -90px;
+    bottom: 0;
+}
+
+.b-1-clouds .white-cloud-b-2 {
+    left: -100px;
+    bottom: -130px;
+}
+
+.b-1-clouds .green-cloud-b-2 {
+    left: -80px;
+    bottom: 100px;
+}
+
+.b-1-clouds .b-1-clouds-blue-2 {
+    left: -200px;
+    bottom: -200px;
+}
+
+/*  scene 1 b 2, scene 1 b 3, scene 1 b 4 */
+#scene-1-b-2, #scene-1-b-3, #scene-1-b-4 {
+    background: #00a7a2;
+}
+
+/*  scene 1 b 2 */
+.birds {
+    right: -300px;
+    top: 90%;
+    z-index: 99;
+}
+
+#scene-1-b-2 .green-cloud-bg-2-1 {
+    right: -650px;
+    top: 230px;
+    opacity: 0;
+}
+
+#scene-1-b-2 .green-cloud-2-b-2-1 {
+    right: -350px;
+    top: 50%;
+    opacity: 0;
+}
+
+.info-1-b-2-1 {
+    right: 300px;
+    bottom: 300px;
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* scene 1 b 3 */
+#scene-1-b-3 {
+    height: 80vh;
+}
+
+#scene-1-b-3 .green-cloud-bg-1 {
+    right: -650px;
+    top: 130px;
+    opacity: 0;
+}
+
+#scene-1-b-3 .green-cloud-2-b-1 {
+    right: -350px;
+    top: 40%;
+    opacity: 0;
+}
+
+#scene-1-b-3 .green-cloud-bg-2 {
+    transform: rotateY(-180deg);
+    left: -650px;
+    top: -200px;
+    opacity: 0;
+}
+
+#scene-1-b-3 .green-cloud-2-b-2 {
+    transform: rotateY(-180deg);
+    left: -350px;
+    top: 0;
+    opacity: 0;
+}
+
+.info-1-b-3-1 {
+    left: 53%;
+    top: 150px;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 99999;
+}
+
+/* scene 1 b 4 */
+#scene-1-b-4 {
+    height: 120vh;
+}
+
+.single-gold-cloud-right {
+    right: -220px;
+    top: -50px;
+}
+
+.single-gold-cloud-left {
+    left: -220px;
+    top: -60px;
+}
+
+.chat-1-b-4-1 {
+    left: 50%;
+    top: -230px;
+    transform-origin: left bottom;
+    transform: scale(0);
+    opacity: 0;
+    z-index: 99999;
+}
+
+.chat-1-b-4-1 .chat-text {
+    left: 65px !important;
+    top: 35px !important;
+}
+
+.tree-right-1 {
+    right: -50px;
+    bottom: -100px;
+}
+
+.tree-right-2 {
+    right: 220px;
+    bottom: 230px;
+}
+
+.tree-left-1 {
+    transform: rotateY(-180deg);
+    left: -50px;
+    bottom: -100px;
+}
+
+.tree-left-2 {
+    transform: rotateY(-180deg);
+    left: 220px;
+    bottom: 230px;
+}
+
+.green-ground-bg-1 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,5 +1,6 @@
 let controller = null;
 
+// scene a 
 function loadScene1a2() {
     let sun = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-2',
@@ -233,6 +234,222 @@ function loadScene1a5() {
     ]);
 }
 
+function getPx(percentage) {
+    return (percentage / 100) * window.innerWidth;
+}
+
+// scene b
+function loadGuruMinda() {
+    let x = 0, y = 0, bezierValues = [];
+
+    for (let i = 0; i < 8; i++) {
+        x = i % 2 === 0 ? 70 : 30;
+        y = (i + 1) * 300
+
+        bezierValues.push({
+            left: getPx(x),
+            top: y
+        });
+    }
+
+    bezierValues.push({
+        left: getPx(50),
+        top: y + 300
+    });
+
+    let fallpath = {
+        type: 'soft',
+        values: bezierValues
+    }
+    
+    let timeline = new TimelineMax()
+            .add(TweenMax.to(document.querySelector("#falling-guruminda"), .1, {css:{bezier:fallpath}}), 0);
+
+    let gurumindaScene = new ScrollMagic.Scene({triggerElement: "#scene-b-parent", duration: 3250, offset: 400})
+                .setClassToggle('#falling-guruminda', 'animated')
+                .setTween(timeline)
+                .addIndicators();
+
+    controller.addScene([
+        gurumindaScene
+    ]);
+}
+
+function loadScene1b1() {
+    let greenRain = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-1',
+        offset: 300
+    })
+    .setClassToggle('.green-rain', 'animate-appear')
+    .addIndicators();
+
+    let yellowRain = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-1',
+        offset: 350
+    })
+    .setClassToggle('.yellow-rain', 'animate-appear')
+    .addIndicators();
+
+    let thunder1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-1',
+        offset: 400
+    })
+    .setClassToggle('.thunder-1', 'animate-appear')
+    .addIndicators();
+
+    let thunder2 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-1',
+        offset: 400
+    })
+    .setClassToggle('.thunder-2', 'animate-appear')
+    .addIndicators();
+
+    let thunder3 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-1',
+        offset: 400
+    })
+    .setClassToggle('.thunder-3', 'animate-appear')
+    .addIndicators();
+
+    let info1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-1',
+        offset: 600
+    })
+    .setClassToggle('.info-1-b-1', 'animate-chat')
+    .addIndicators();
+
+    let clouds = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-1',
+    })
+    .setClassToggle('.b-1-clouds', 'animated')
+    .addIndicators();
+
+    controller.addScene([
+        greenRain, yellowRain, thunder1, thunder2, thunder3, info1, clouds
+    ]);
+}
+
+function loadScene1b2() {
+    let cloudInfo1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-2',
+        offset: 400
+    })
+    .setClassToggle('.info-1-b-2-1', 'animate-chat')
+    .addIndicators();
+
+    let birds = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-2',
+        offset: 700
+    })
+    .setVelocity('.birds', { opacity: 1, right: 20 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550] })
+    .addIndicators();
+
+    let greenCloudBg1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-2',
+        offset: 200
+    })
+    .setVelocity('.green-cloud-bg-2-1', { opacity: 1, right: -350 }, { duration: 700 })
+    .addIndicators();
+
+    let greenCloud1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-2',
+        offset: 200
+    })
+    .setVelocity('.green-cloud-2-b-2-1', { opacity: 1, right: -90 }, { duration: 1000 })
+    .addIndicators();
+
+    controller.addScene([
+        cloudInfo1, birds, greenCloudBg1, greenCloud1
+    ]);
+}
+
+function loadScene1b3() {
+    let cloudInfo1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-3',
+    })
+    .setClassToggle('.info-1-b-3-1', 'animate-chat')
+    .addIndicators();
+
+    let greenCloudBg1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-3',
+        offset: 200
+    })
+    .setVelocity('.green-cloud-bg-1', { opacity: 1, right: -350 }, { duration: 700 })
+    .addIndicators();
+
+    let greenCloud1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-3',
+        offset: 200
+    })
+    .setVelocity('.green-cloud-2-b-1', { opacity: 1, right: -90 }, { duration: 1000 })
+    .addIndicators();
+
+    let greenCloudBg2 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-3',
+    })
+    .setVelocity('.green-cloud-bg-2', { opacity: 1, left: -350 }, { duration: 700 })
+    .addIndicators();
+
+    let greenCloud2 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-3',
+    })
+    .setVelocity('.green-cloud-2-b-2', { opacity: 1, left: -90 }, { duration: 1000 })
+    .addIndicators();
+
+    controller.addScene([
+        cloudInfo1, greenCloudBg1, greenCloud1, greenCloudBg2, greenCloud2
+    ]);
+}
+
+function loadScene1b4() {
+    let chat1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-4',
+        offset: 100
+    })
+    .setClassToggle('.chat-1-b-4-1', 'animate-chat')
+    .addIndicators();
+
+    let singleCloudLeft = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-4',
+    })
+    .setVelocity('.single-gold-cloud-left', { left: -110 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550] })
+    .addIndicators();
+
+    let singleCloudRight = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-4',
+    })
+    .setVelocity('.single-gold-cloud-right', { right: -110 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550] })
+    .addIndicators();
+
+    let treeRight1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-4',
+    })
+    .setVelocity('.tree-right-1', { bottom: 400 }, { duration: 900 })
+    .addIndicators();
+
+    let treeRight2 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-4',
+    })
+    .setVelocity('.tree-right-2', { bottom: 530 }, { duration: 1100, easing: [0.680,-0.150, 0.265, 1.550], delay: 200 })
+    .addIndicators();
+
+    let treeLeft1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-4',
+    })
+    .setVelocity('.tree-left-1', { bottom: 400 }, { duration: 700, delay: 200 })
+    .addIndicators();
+
+    let treeLeft2 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-4',
+    })
+    .setVelocity('.tree-left-2', { bottom: 530 }, { duration: 1400 })
+    .addIndicators();
+
+    controller.addScene([
+        chat1, singleCloudLeft, singleCloudRight, treeRight1, treeRight2, treeLeft1, treeLeft2
+    ])
+}
+
 window.onload = () => {
     controller = new ScrollMagic.Controller();
 
@@ -240,4 +457,32 @@ window.onload = () => {
     loadScene1a3();
     loadScene1a4();
     loadScene1a5();
+
+    loadGuruMinda();
+    loadScene1b1();
+    loadScene1b2();
+    loadScene1b3();
+    loadScene1b4();
 };
+
+/* let visualizeTweenMaxBezier = (tween, steps) => {
+    //remove any existing curve
+    $("#show-curve").empty();
+
+    for (let i = 0; i < steps-1; i++){
+
+        tween.progress(i/steps);
+
+        $("#show-curve").append("<div id='point" + i + "'></div>");
+
+        $("#point"+i).css({
+            position: "absolute",
+            width: "5px",
+            height: "5px",
+            "background-color": "#fff",
+            top: tween.target.css("top"),
+            left: tween.target.css("left"),
+        });
+    }
+    tween.restart();
+} */
