@@ -5,39 +5,33 @@ function loadScene1a2() {
     let sun = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-2',
     })
-    .setVelocity('.sun-svg', { opacity: 1, top: 150 }, { duration: 1500 })
-    .addIndicators();
+    .setVelocity('.sun-svg', { opacity: 1, top: 150 }, { duration: 1500 });
 
     let whiteCloudLeft = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-2',
     })
-    .setVelocity('.white-cloud-left', { opacity: 1, left: -90 }, { duration: 1500 })
-    .addIndicators();
+    .setVelocity('.white-cloud-left', { opacity: 1, left: -90 }, { duration: 1500 });
 
     let blueCloudLeft = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-2',
     })
-    .setVelocity('.blue-cloud-left', { opacity: 1, left: -205 }, { duration: 900, easing: 'ease-in' })
-    .addIndicators();
+    .setVelocity('.blue-cloud-left', { opacity: 1, left: -205 }, { duration: 900, easing: 'ease-in' });
 
     let whiteCloudRight = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-2',
     })
-    .setVelocity('.white-cloud-right', { opacity: 1, right: -80 }, { duration: 1500 })
-    .addIndicators();
+    .setVelocity('.white-cloud-right', { opacity: 1, right: -80 }, { duration: 1500 });
 
     let blueCloudRight = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-2',
     })
-    .setVelocity('.blue-cloud-right', { opacity: 1, right: -195 }, { duration: 900, easing: 'cubic-bezier(.25, -1, .3, 2)' })
-    .addIndicators();
+    .setVelocity('.blue-cloud-right', { opacity: 1, right: -195 }, { duration: 900, easing: 'cubic-bezier(.25, -1, .3, 2)' });
 
     let textScene = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-2',
         offset: 500
     })
-    .setClassToggle('.text-1', 'reveal')
-    .addIndicators();
+    .setClassToggle('.text-1', 'reveal');
 
     controller.addScene([
         sun, whiteCloudLeft, blueCloudLeft, whiteCloudRight, blueCloudRight, textScene
@@ -48,41 +42,35 @@ function loadScene1a3() {
     let boxBg = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-3',
     })
-    .setVelocity('.scene-box-bg', { right: 0, opacity: 1 }, { duration: 1500 })
-    .addIndicators();
+    .setVelocity('.scene-box-bg', { right: 0, opacity: 1 }, { duration: 1500 });
 
     let castle = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-3',
     })
-    .setVelocity('.castle', { left: -160, opacity: 1 }, { duration: 1500 })
-    .addIndicators();
+    .setVelocity('.castle', { left: -160, opacity: 1 }, { duration: 1500 });
 
     let cloudInfo = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-3',
     })
-    .setVelocity('#scene-1-a-3 .cloud-info', { bottom: 40, opacity: 1 }, { duration: 1000 })
-    .addIndicators();
+    .setVelocity('#scene-1-a-3 .cloud-info', { bottom: 40, opacity: 1 }, { duration: 1000 });
 
     let chatCloud1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-3',
         offset: 300
     })
-    .setClassToggle('.chat-cloud-a-3-1', 'animate-chat')
-    .addIndicators();
+    .setClassToggle('.chat-cloud-a-3-1', 'animate-chat');
 
     let chatCloud2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-3',
         offset: 400
     })
-    .setClassToggle('.chat-cloud-a-3-2', 'animate-chat')
-    .addIndicators();
+    .setClassToggle('.chat-cloud-a-3-2', 'animate-chat');
 
     let text1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-3',
         offset: 400
     })
-    .setVelocity('#scene-1-a-3 .text-1', { opacity: 1 }, { duration: 1000 })
-    .addIndicators();
+    .setVelocity('#scene-1-a-3 .text-1', { opacity: 1 }, { duration: 1000 });
 
     let blockElements = document.querySelectorAll('#scene-1-a-3 .scene-block div');
 
@@ -92,7 +80,7 @@ function loadScene1a3() {
             offset: 600,
         })
         .setVelocity(blockElements[i], { opacity: 1, bottom: 0 }, { duration: 800, delay: i * 100 })
-        .addIndicators({name: 'block ' + (i+1) })
+        // .addIndicators({name: 'block ' + (i+1) })
         .addTo(controller);
     }
 
@@ -100,8 +88,7 @@ function loadScene1a3() {
         triggerElement: '#scene-1-a-3',
         offset: 700
     })
-    .setVelocity('#scene-1-a-3 .text-2', { opacity: 1 }, { duration: 1000 })
-    .addIndicators();
+    .setVelocity('#scene-1-a-3 .text-2', { opacity: 1 }, { duration: 1000 });
 
     controller.addScene([
         boxBg, castle, cloudInfo, chatCloud1, chatCloud2, text1, text2
@@ -112,54 +99,46 @@ function loadScene1a4() {
     let boxBg = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-4',
     })
-    .setVelocity('.scene-bg-1', { bottom: 0,  opacity: 1 }, { duration: 700 })
-    .addIndicators();
+    .setVelocity('.scene-bg-1', { bottom: 0,  opacity: 1 }, { duration: 700 });
 
     let goldCloud = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-4',
     })
-    .setVelocity('.gold-cloud', { right: -30,  opacity: 1 }, { duration: 700 })
-    .addIndicators();
+    .setVelocity('.gold-cloud', { right: -30,  opacity: 1 }, { duration: 700 });
 
     let whiteStar = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-4',
     })
     .setVelocity('.white-star', { top: -20, opacity: 1 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550]
-    })
-    .addIndicators();
+    });
 
     let blueStar = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-4',
     })
-    .setVelocity('.blue-star', { right: -87, opacity: 1 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550] })
-    .addIndicators();
+    .setVelocity('.blue-star', { right: -87, opacity: 1 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550] });
 
     let blueCloud = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-4',
     })
-    .setVelocity('.blue-cloud-2', { right: -80, opacity: 1 }, { duration: 700 })
-    .addIndicators();
+    .setVelocity('.blue-cloud-2', { right: -80, opacity: 1 }, { duration: 700 });
 
     let guruminda = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-4',
         offset: 200
     })
-    .setVelocity('.char-guruminda', { left: '50%',  opacity: 1 }, { duration: 1000 })
-    .addIndicators();
+    .setVelocity('.char-guruminda', { left: '50%',  opacity: 1 }, { duration: 1000 });
 
     let chatCloud1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-4',
         offset: 300,
     })
-    .setClassToggle('.chat-cloud-1', 'animate-chat')
-    .addIndicators();
+    .setClassToggle('.chat-cloud-1', 'animate-chat');
 
     let chatCloud2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-4',
         offset: 400,
     })
-    .setClassToggle('.chat-cloud-2', 'animate-chat')
-    .addIndicators();
+    .setClassToggle('.chat-cloud-2', 'animate-chat');
 
     controller.addScene([
         guruminda, boxBg, goldCloud, whiteStar, blueStar, blueCloud, chatCloud1, chatCloud2
@@ -170,64 +149,55 @@ function loadScene1a5() {
     let block21 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-5',
     })
-    .setVelocity('.block-2-1', { opacity: 1, left: 0 }, { duration: 700 })
-    .addIndicators();
+    .setVelocity('.block-2-1', { opacity: 1, left: 0 }, { duration: 700 });
 
     let chatCloud1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-5',
         offset: 150,
     })
-    .setClassToggle('.block-2-1-chat', 'animate-chat')
-    .addIndicators();
+    .setClassToggle('.block-2-1-chat', 'animate-chat');
 
     let chatCloud2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-5',
         offset: 100,
     })
-    .setClassToggle('.block-2-1-chat-2', 'animate-chat')
-    .addIndicators();
+    .setClassToggle('.block-2-1-chat-2', 'animate-chat');
 
     let text1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-5',
         offset: 200
     })
-    .setVelocity('#scene-1-a-5 .text-1', { opacity: 1 }, { duration: 1000 })
-    .addIndicators();
+    .setVelocity('#scene-1-a-5 .text-1', { opacity: 1 }, { duration: 1000 });
 
     let text2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-5',
         offset: 400
     })
-    .setVelocity('#scene-1-a-5 .text-2', { opacity: 1 }, { duration: 1000 })
-    .addIndicators();
+    .setVelocity('#scene-1-a-5 .text-2', { opacity: 1 }, { duration: 1000 });
 
     let block22 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-5',
         offset: 300
     })
-    .setVelocity('.block-2-2', { opacity: 1, right: 0 }, { duration: 700, easing: [0.680,-0.150, 0.265, 1.550] })
-    .addIndicators();
+    .setVelocity('.block-2-2', { opacity: 1, right: 0 }, { duration: 700, easing: [0.680,-0.150, 0.265, 1.550] });
 
     let block23 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-5',
         offset: 400
     })
-    .setVelocity('.block-2-3', { opacity: 1, left: 0 }, { duration: 700, easing: [0.680,-0.150, 0.265, 1.550] })
-    .addIndicators();
+    .setVelocity('.block-2-3', { opacity: 1, left: 0 }, { duration: 700, easing: [0.680,-0.150, 0.265, 1.550] });
 
     let block23Cloud = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-5',
         offset: 400
     })
-    .setVelocity('.block-2-3-cloud', { right: -40, opacity: 1 }, { duration: 700, easing: [0.680,-0.150, 0.265, 1.550], delay: 300 })
-    .addIndicators();
+    .setVelocity('.block-2-3-cloud', { right: -40, opacity: 1 }, { duration: 700, easing: [0.680,-0.150, 0.265, 1.550], delay: 300 });
 
     let block23Info = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-5',
         offset: 400
     })
-    .setVelocity('.block-2-3-info', { left: '50%', opacity: 1 }, { duration: 700, easing: [0.680,-0.150, 0.265, 1.550], delay: 300 })
-    .addIndicators();
+    .setVelocity('.block-2-3-info', { left: '50%', opacity: 1 }, { duration: 700, easing: [0.680,-0.150, 0.265, 1.550], delay: 300 });
 
     controller.addScene([
         block21, chatCloud1, chatCloud2, text1, text2, block22, block23, block23Cloud, block23Info
@@ -268,7 +238,7 @@ function loadGuruMinda() {
     let gurumindaScene = new ScrollMagic.Scene({triggerElement: "#scene-b-parent", duration: 3250, offset: 400})
                 .setClassToggle('#falling-guruminda', 'animated')
                 .setTween(timeline)
-                .addIndicators();
+        ;
 
     controller.addScene([
         gurumindaScene
@@ -280,49 +250,42 @@ function loadScene1b1() {
         triggerElement: '#scene-1-b-1',
         offset: 300
     })
-    .setClassToggle('.green-rain', 'animate-appear')
-    .addIndicators();
+    .setClassToggle('.green-rain', 'animate-appear');
 
     let yellowRain = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-1',
         offset: 350
     })
-    .setClassToggle('.yellow-rain', 'animate-appear')
-    .addIndicators();
+    .setClassToggle('.yellow-rain', 'animate-appear');
 
     let thunder1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-1',
         offset: 400
     })
-    .setClassToggle('.thunder-1', 'animate-appear')
-    .addIndicators();
+    .setClassToggle('.thunder-1', 'animate-appear');
 
     let thunder2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-1',
         offset: 400
     })
-    .setClassToggle('.thunder-2', 'animate-appear')
-    .addIndicators();
+    .setClassToggle('.thunder-2', 'animate-appear');
 
     let thunder3 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-1',
         offset: 400
     })
-    .setClassToggle('.thunder-3', 'animate-appear')
-    .addIndicators();
+    .setClassToggle('.thunder-3', 'animate-appear');
 
     let info1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-1',
         offset: 600
     })
-    .setClassToggle('.info-1-b-1', 'animate-chat')
-    .addIndicators();
+    .setClassToggle('.info-1-b-1', 'animate-chat');
 
     let clouds = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-1',
     })
-    .setClassToggle('.b-1-clouds', 'animated')
-    .addIndicators();
+    .setClassToggle('.b-1-clouds', 'animated');
 
     controller.addScene([
         greenRain, yellowRain, thunder1, thunder2, thunder3, info1, clouds
@@ -334,29 +297,25 @@ function loadScene1b2() {
         triggerElement: '#scene-1-b-2',
         offset: 400
     })
-    .setClassToggle('.info-1-b-2-1', 'animate-chat')
-    .addIndicators();
+    .setClassToggle('.info-1-b-2-1', 'animate-chat');
 
     let birds = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-2',
         offset: 700
     })
-    .setVelocity('.birds', { opacity: 1, right: 20 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550] })
-    .addIndicators();
+    .setVelocity('.birds', { opacity: 1, right: 20 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550] });
 
     let greenCloudBg1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-2',
         offset: 200
     })
-    .setVelocity('.green-cloud-bg-2-1', { opacity: 1, right: -350 }, { duration: 700 })
-    .addIndicators();
+    .setVelocity('.green-cloud-bg-2-1', { opacity: 1, right: -350 }, { duration: 700 });
 
     let greenCloud1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-2',
         offset: 200
     })
-    .setVelocity('.green-cloud-2-b-2-1', { opacity: 1, right: -90 }, { duration: 1000 })
-    .addIndicators();
+    .setVelocity('.green-cloud-2-b-2-1', { opacity: 1, right: -90 }, { duration: 1000 });
 
     controller.addScene([
         cloudInfo1, birds, greenCloudBg1, greenCloud1
@@ -367,34 +326,29 @@ function loadScene1b3() {
     let cloudInfo1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-3',
     })
-    .setClassToggle('.info-1-b-3-1', 'animate-chat')
-    .addIndicators();
+    .setClassToggle('.info-1-b-3-1', 'animate-chat');
 
     let greenCloudBg1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-3',
         offset: 200
     })
-    .setVelocity('.green-cloud-bg-1', { opacity: 1, right: -350 }, { duration: 700 })
-    .addIndicators();
+    .setVelocity('.green-cloud-bg-1', { opacity: 1, right: -350 }, { duration: 700 });
 
     let greenCloud1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-3',
         offset: 200
     })
-    .setVelocity('.green-cloud-2-b-1', { opacity: 1, right: -90 }, { duration: 1000 })
-    .addIndicators();
+    .setVelocity('.green-cloud-2-b-1', { opacity: 1, right: -90 }, { duration: 1000 });
 
     let greenCloudBg2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-3',
     })
-    .setVelocity('.green-cloud-bg-2', { opacity: 1, left: -350 }, { duration: 700 })
-    .addIndicators();
+    .setVelocity('.green-cloud-bg-2', { opacity: 1, left: -350 }, { duration: 700 });
 
     let greenCloud2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-3',
     })
-    .setVelocity('.green-cloud-2-b-2', { opacity: 1, left: -90 }, { duration: 1000 })
-    .addIndicators();
+    .setVelocity('.green-cloud-2-b-2', { opacity: 1, left: -90 }, { duration: 1000 });
 
     controller.addScene([
         cloudInfo1, greenCloudBg1, greenCloud1, greenCloudBg2, greenCloud2
@@ -406,44 +360,37 @@ function loadScene1b4() {
         triggerElement: '#scene-1-b-4',
         offset: 100
     })
-    .setClassToggle('.chat-1-b-4-1', 'animate-chat')
-    .addIndicators();
+    .setClassToggle('.chat-1-b-4-1', 'animate-chat');
 
     let singleCloudLeft = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-4',
     })
-    .setVelocity('.single-gold-cloud-left', { left: -110 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550] })
-    .addIndicators();
+    .setVelocity('.single-gold-cloud-left', { left: -110 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550] });
 
     let singleCloudRight = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-4',
     })
-    .setVelocity('.single-gold-cloud-right', { right: -110 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550] })
-    .addIndicators();
+    .setVelocity('.single-gold-cloud-right', { right: -110 }, { duration: 1000, easing: [0.680,-0.150, 0.265, 1.550] });
 
     let treeRight1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-4',
     })
-    .setVelocity('.tree-right-1', { bottom: 400 }, { duration: 900 })
-    .addIndicators();
+    .setVelocity('.tree-right-1', { bottom: 400 }, { duration: 900 });
 
     let treeRight2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-4',
     })
-    .setVelocity('.tree-right-2', { bottom: 530 }, { duration: 1100, easing: [0.680,-0.150, 0.265, 1.550], delay: 200 })
-    .addIndicators();
+    .setVelocity('.tree-right-2', { bottom: 530 }, { duration: 1100, easing: [0.680,-0.150, 0.265, 1.550], delay: 200 });
 
     let treeLeft1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-4',
     })
-    .setVelocity('.tree-left-1', { bottom: 400 }, { duration: 700, delay: 200 })
-    .addIndicators();
+    .setVelocity('.tree-left-1', { bottom: 400 }, { duration: 700, delay: 200 });
 
     let treeLeft2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-b-4',
     })
-    .setVelocity('.tree-left-2', { bottom: 530 }, { duration: 1400 })
-    .addIndicators();
+    .setVelocity('.tree-left-2', { bottom: 530 }, { duration: 1400 });
 
     controller.addScene([
         chat1, singleCloudLeft, singleCloudRight, treeRight1, treeRight2, treeLeft1, treeLeft2
