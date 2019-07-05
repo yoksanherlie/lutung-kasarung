@@ -92,6 +92,7 @@ body {
 
 .title-container .sub-title span span {
     -webkit-filter: blur(30px);
+    filter: blur(30px);
     animation: blur .7s forwards;
     margin: 0 -2px;
 }
@@ -145,9 +146,6 @@ body {
 }
 
 /* scene 1a2 */
-#scene-1-a-2 {
-}
-
 #scene-1-a-2 .text-1 {
     top: 600px;
     font-size: 28px;
@@ -213,11 +211,26 @@ body {
     opacity: .1;
 }
 
+#scene-1-a-3 .scene-box-bg .transparent-cloud {
+    position: absolute;
+    right: -350px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
 #scene-1-a-3 .scene-box-1 .castle {
     position: absolute;
     left: -400px;
     top: -350px;
     opacity: 0;
+}
+
+#scene-1-a-3 .scene-box-1 .castle .castle-cloud {
+    position: absolute;
+    bottom: 0;
+    left: -70px;
+    width: 100%;
 }
 
 #scene-1-a-3 .scene-box-1 .chat-cloud-a {
@@ -273,6 +286,12 @@ body {
     bottom: -100px;
 }
 
+#scene-1-a-3 .scene-block .block-1-2 .block-1-2-a {
+    position: absolute;
+    left: 0;
+    top: -20px;
+}
+
 #scene-1-a-3 .scene-block .block-1-3 {
     transform: translateY(-20px) translateX(-20px);
 }
@@ -296,6 +315,14 @@ body {
     position: relative;
     bottom: -200px;
     opacity: 0
+}
+
+#scene-1-a-4 .scene-box-1 .transparent-cloud-2 {
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 100%;
+    height: 100%;
 }
 
 #scene-1-a-4 .scene-box-1 .chat-cloud-a {
@@ -466,7 +493,27 @@ body {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 9999;
+    z-index: 9998;
+}
+
+#falling-guruminda.change-color .fg3 {
+    transition: all .3s ease;
+    fill: #304a63;
+}
+
+#falling-guruminda.change-color .falling-effect {
+    opacity: 1;
+}
+
+#falling-guruminda .falling-effect {
+    position: absolute;
+    top: -95px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: all .5s ease;
 }
 
 .info-1-b-1 {
@@ -530,7 +577,7 @@ body {
     bottom: 0;
     width: 100%;
     height: 50%;
-    z-index: 99;
+    z-index: 9999;
 }
 
 .b-1-clouds.animated {
@@ -548,12 +595,12 @@ body {
 
 .b-1-clouds .b-1-clouds-blue {
     right: -110px;
-    bottom: -80px;
+    bottom: -90px;
 }
 
 .b-1-clouds .white-cloud-b {
-    right: -150px;
-    bottom: -200px;
+    right: -80px;
+    bottom: -240px;
 }
 
 .b-1-clouds .green-cloud-b {
@@ -562,7 +609,7 @@ body {
 }
 
 .b-1-clouds .white-cloud-b-2 {
-    left: -100px;
+    left: -130px;
     bottom: -130px;
 }
 
@@ -662,8 +709,8 @@ body {
 }
 
 .chat-1-b-4-1 {
-    left: 50%;
-    top: -230px;
+    left: 60%;
+    top: -150px;
     transform-origin: left bottom;
     transform: scale(0);
     opacity: 0;
@@ -697,9 +744,26 @@ body {
     bottom: 230px;
 }
 
+.cloud-above-ground {
+    position: absolute;
+    left: 50%;
+    bottom: 550px;
+    transform: translateX(-50%);
+}
+
 .green-ground-bg-1 {
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.gd-left {
+    left: 0;
+    bottom: 400px;
+}
+
+.gd-right {
+    right: 0;
+    bottom: 400px;
 }

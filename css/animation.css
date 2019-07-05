@@ -49,5 +49,5 @@
 }
 
 #falling-guruminda.animated {
-    animation: guruminda .7s infinite alternate;
+    animation: guruminda .7s ease-in-out infinite alternate;
 }
