@@ -13,6 +13,63 @@
     src: url(../fonts/gotham-rounded-light.otf);
 }
 
+/* header */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 20px 0;
+    z-index: 999;
+}
+
+header .container {
+    position: relative;
+    height: 100%;
+}
+
+header .container .header-menu-left,
+header .container .header-menu-right {
+    position: absolute;
+    top: 25px;
+}
+
+header .container .header-menu-left {
+    left: 0;
+}
+
+header .container .header-menu-right {
+    right: 0;
+}
+
+header .container ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header .container ul li {
+    display: inline-block;
+}
+
+header .container ul li:not(:last-child) {
+    margin-right: 50px;
+}
+
+header a {
+    color: white;
+    font-size: 20px;
+    font-family: GothamBook;
+    transition: all .3s ease;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+header a:hover {
+    opacity: .5;
+}
+
 /* menu section */
 .menu-section {
     height: 350px;
@@ -28,17 +85,30 @@
     flex: 1 1 33.33333%;
     position: relative;
     height: 100%;
+    cursor: pointer;
+}
+
+.cols-menu-section a {
+    display: block;
+    height: 100%;
+    position: relative;
+    z-index: 999;
+}
+
+.cols-menu-section:hover label {
+    transform: translateY(-10px);
 }
 
 .cols-menu-section label {
     color: white;
     font-family: GothamBold;
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 40px;
+    right: 40px;
     transition: all .3s ease;
     text-align: center;
     font-size: 40px;
+    cursor: pointer;
 }
 
 .cols-menu-section:before {
