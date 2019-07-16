@@ -863,6 +863,10 @@ body {
     opacity: 0;
 }
 
+.scene-box-c1-2-2 > svg {
+    /*animation: objectRotation 10s infinite linear;*/
+}
+
 .scene-box-c1-2-2 .lutung-char {
     position: absolute;
     top: 50%;

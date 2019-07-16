@@ -74,3 +74,7 @@
     animation: lutungCrownFallAnimation 1s linear forwards .5s;
 }
 
+@keyframes objectRotation {
+    from { transform: rotate(0); }
+    to { transform: rotate(360deg); }
+}

@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    font-family: GothamBook;
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: GothamBook;
+    src: url(../fonts/gotham-rounded-book.otf);
+}
+
+@font-face {
+    font-family: GothamBold;
+    src: url(../fonts/gotham-rounded-bold.otf);
+}
+
+@font-face {
+    font-family: GothamLight;
+    src: url(../fonts/gotham-rounded-light.otf);
+}
+
+.page-section {
+    min-height: 90vh;
+}
+
+/* background */
+.page-section#contact {
+    background: #2d769e url(../page_assets/contact-bg.png);
+    background-size: 93% 110%;
+    background-position: 110px -80px;
+    background-repeat: no-repeat;
+}
+
+.page-section#message {
+    background: #cc7274 url(../page_assets/message-bg.png);
+    background-size: 90% 110%;
+    background-position: 170px -75px;
+    background-repeat: no-repeat;
+}
+
+.page-section#about {
+    background: #519f9e url(../page_assets/about-bg.png);
+    background-size: 90% 100%;
+    background-position: 170px 0;
+    background-repeat: no-repeat;
+    padding-bottom: 200px;
+
+}
+
+/* header container */
+.page-section .header-container {
+    margin-top: 150px;
+    margin-bottom: 40px;
+}
+
+.page-section .header-container h1 {
+    margin: 0;
+    color: white;
+    font-size: 3rem;
+    font-family: GothamBold;
+}
+
+/* content container */
+.page-section .content-wrapper {
+    margin-bottom: 20px;
+}
+
+.page-section .content-wrapper .content-header {
+    font-size: 1.3rem;
+    color: #154562;
+    margin-bottom: 1rem;
+    font-family: GothamBold;
+}
+
+.page-section .content-wrapper .content-description {
+    color: white;
+    line-height: 2;
+}
+
+/* content row */
+.content-row-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-row-wrapper {
+    flex: 1 1 33.33333%;
+    max-width: 33.33333%;
+}
+
+.content-row-wrapper .content-row-header {
+    color: #154562;
+    font-size: 1.2rem;
+    font-family: GothamBold;
+}
+
+.content-row-wrapper .content-row-image,
+.content-row-wrapper .content-row-image img {
+    width: 150px;
+}
+
+.content-row-wrapper .content-row-image.image-1 {
+    position: relative;
+    left: -20px;
+}
+
+.content-row-wrapper .content-row-description {
+    line-height: 2;
+    color: white;
+}
+
+/* container header content*/
+.container-header-content label {
+    color: #154562;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: GothamBold;
+}
+
+/* about */
+.row-about {
+    margin-bottom: 32px;
+}
+
+.about-title {
+    font-size: 64px;
+    line-height: 1.3;
+    margin: 0;
+    color: white;
+    font-family: GothamBold;
+    font-weight: 100;
+}
+
+.about-description {
+    line-height: 2;
+    color: white;
+}
