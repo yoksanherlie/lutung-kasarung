@@ -1,6 +1,17 @@
 let controller = null;
 
-// scene a 
+// scene a
+function loadScene1aTitle() {
+    let partTitle = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-a-title'
+    })
+        .setVelocity('.part-title-container-a-1', { opacity: 1, top: 80 }, { duration: 750 });
+
+    controller.addScene([
+        partTitle
+    ]);
+}
+
 function loadScene1a2() {
     let sun = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-2',
@@ -90,8 +101,14 @@ function loadScene1a3() {
     })
     .setVelocity('#scene-1-a-3 .text-2', { opacity: 1 }, { duration: 1000 });
 
+    let blueCloud = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-a-3',
+        offset: 700
+    })
+        .setVelocity('.blue-cloud-1a3-2', { opacity: 1, left: 80 }, { duration: 750 });
+
     controller.addScene([
-        boxBg, castle, cloudInfo, chatCloud1, chatCloud2, text1, text2
+        boxBg, castle, cloudInfo, chatCloud1, chatCloud2, text1, text2, blueCloud
     ]);
 }
 
@@ -163,6 +180,12 @@ function loadScene1a5() {
     })
     .setClassToggle('.block-2-1-chat-2', 'animate-chat');
 
+    let breath = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-a-5',
+        offset: 200
+    })
+        .setVelocity('.block-2-1-breath', { opacity: 1, right: -110 }, { duration: 500 });
+
     let text1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-a-5',
         offset: 200
@@ -200,7 +223,7 @@ function loadScene1a5() {
     .setVelocity('.block-2-3-info', { left: '50%', opacity: 1 }, { duration: 700, easing: [0.680,-0.150, 0.265, 1.550], delay: 300 });
 
     controller.addScene([
-        block21, chatCloud1, chatCloud2, text1, text2, block22, block23, block23Cloud, block23Info
+        block21, chatCloud1, chatCloud2, breath, text1, text2, block22, block23, block23Cloud, block23Info
     ]);
 }
 
@@ -594,6 +617,7 @@ function loadScene1c3() {
 window.onload = () => {
     controller = new ScrollMagic.Controller();
 
+    loadScene1aTitle();
     loadScene1a2();
     loadScene1a3();
     loadScene1a4();

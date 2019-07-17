@@ -119,7 +119,7 @@ header a:hover {
     width: 100%;
     height: 100%;
     background-position: 100% 100%;
-    background-size: 150% 150%;
+    background-size: 175% 150%;
     transform: rotateY(180deg);
 }
 
@@ -129,7 +129,7 @@ header a:hover {
 
 .cols-menu-section.cols-2:before {
     background-image: url(../page_assets/about-bg.png);
-    background-size: 140% 180%;
+    background-size: 150% 180%;
 }
 
 .cols-menu-section.cols-3:before {
@@ -140,6 +140,7 @@ header a:hover {
 .share-section {
     background: #8e9a4b;
     padding: 60px 0;
+    overflow: hidden;
 }
 
 .share-title {
@@ -155,10 +156,24 @@ header a:hover {
     font-family: GothamLight;
 }
 
+.background-share-photo {
+    position: relative;
+    height: 320px;
+}
+
+.background-share-photo img {
+    width: 500px;
+    position: absolute;
+    bottom: -90px;
+    left: -100px;
+}
+
 /* form section */
 .form-section {
     padding: 80px 0;
     background: #e9a122;
+    position: relative;
+    overflow: hidden;
 }
 
 .header-container {
@@ -167,6 +182,25 @@ header a:hover {
     font-size: 32px;
     font-family: GothamBold;
     line-height: 1.5;
+    margin-bottom: 100px;
+}
+
+.cloud-form-1 {
+    position: absolute;
+    left: -25%;
+    top: 5%;
+    width: 700px;
+}
+
+.cloud-form-1 img {
+    transform: rotateY(180deg);
+}
+
+.cloud-form-2 {
+    position: absolute;
+    right: -25%;
+    top: 25%;
+    width: 700px;
 }
 
 /* form */
@@ -179,6 +213,35 @@ header a:hover {
     font-family: GothamLight;
     width: 100%;
     font-size: 16px;
+    outline: 0;
+}
+
+.cols-button-form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    border-radius: 10px;
+    border: 1px solid transparent;
+    padding: 8px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .3s ease;
+    outline: 0;
+}
+
+.btn-white {
+    background: white;
+    color: #154562;
+}
+
+.btn-white:hover {
+    background: #ececec;
+}
+
+.btn-white:active {
+    border-color: #154562;
 }
 
 .form-control::placeholder {
