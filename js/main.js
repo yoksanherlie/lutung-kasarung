@@ -322,7 +322,7 @@ function loadScene1b1() {
     .setClassToggle('.b-1-clouds', 'animated');
 
     controller.addScene([
-        greenRain, yellowRain, thunder1, thunder2, thunder3, info1, clouds
+        greenRain, yellowRain, thunder1, thunder2, thunder3, info1
     ]);
 }
 
@@ -645,10 +645,34 @@ function loadScene1c4() {
     ]);
 }
 
+// parallax
+function loadParallax() {
+    let parallax1 = document.getElementById('parallax-1');
+    new Parallax(parallax1, {
+        relativeInput: true
+    });
+
+    let title1 = document.getElementById('ganteng');
+    new Parallax(title1, {
+        relativeInput: true
+    });
+
+
+    let sceneCloud = document.getElementById('cloud-ganteng');
+    new Parallax(sceneCloud, {
+        relativeInput: true
+    });
+
+    let scene1c1 = document.getElementById('scene-1-c-1');
+    new Parallax(scene1c1, {
+        relativeInput: true
+    });
+}
+
 window.onload = () => {
     controller = new ScrollMagic.Controller();
 
-    loadScene1aTitle();
+    // loadScene1aTitle();
     loadScene1a2();
     loadScene1a3();
     loadScene1a4();
@@ -664,6 +688,8 @@ window.onload = () => {
     loadScene1c2();
     loadScene1c3();
     loadScene1c4();
+
+    loadParallax();
 };
 
 let visualizeTweenMaxBezier = (tween, steps) => {

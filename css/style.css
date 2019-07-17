@@ -31,6 +31,14 @@ body {
     position: absolute;
 }
 
+.scene.scene-animation > .parallax-container {
+    position: relative;
+}
+
+.scene.scene-animation > .parallax-container > div {
+    position: absolute;
+}
+
 .section-title-container {
     color: white;
     display: flex;
@@ -215,9 +223,11 @@ body {
 }
 
 .part-title {
-    width: 700px;
     font-size: 28px;
+    width: 700px;
     position: relative;
+    left: -340% !important;
+    top: 100% !important;
 }
 
 .part-title span {
@@ -243,7 +253,7 @@ body {
 #scene-1-a-title .part-title-container {
     position: relative;
     top: 0;
-    opacity: 0;
+    /*opacity: 0;*/
 }
 
 /* scene 1a2 */
@@ -689,7 +699,7 @@ body {
 .thunder-3.animate-appear { animation-duration: .6s; }
 
 .b-1-clouds {
-    bottom: 0;
+    bottom: -400px;
     width: 100%;
     height: 50%;
     z-index: 9999;
@@ -705,6 +715,19 @@ body {
 }
 
 .b-1-clouds > div {
+    width: 100%;
+    display: flex !important;
+}
+
+.b-1-clouds .cloud-container-green {
+    top: 10px !important;
+}
+
+.b-1-clouds .cloud-container-white {
+    top: 50px !important;
+}
+
+.b-1-clouds > div > div {
     position: absolute;
 }
 
