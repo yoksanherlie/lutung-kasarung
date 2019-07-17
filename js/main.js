@@ -390,8 +390,14 @@ function loadScene1b3() {
     })
     .setClassToggle('.chat-1-b-4-1', 'animate-chat');
 
+    let text1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-3',
+        offset: 230
+    })
+        .setClassToggle('.text-b3-1', 'animate-chat');
+
     controller.addScene([
-        cloudInfo1, greenCloudBg1, greenCloud1, greenCloudBg2, greenCloud2, chat1
+        cloudInfo1, greenCloudBg1, greenCloud1, greenCloudBg2, greenCloud2, chat1, text1
     ]);
 }
 
@@ -426,8 +432,14 @@ function loadScene1b4() {
     })
     .setVelocity('.tree-left-2', { bottom: 530 }, { duration: 1400 });
 
+    let text1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-b-4',
+        offset: 600
+    })
+        .setClassToggle('.text-b4-1', 'animate-chat');
+
     controller.addScene([
-        singleCloudLeft, singleCloudRight, treeRight1, treeRight2, treeLeft1, treeLeft2
+        singleCloudLeft, singleCloudRight, treeRight1, treeRight2, treeLeft1, treeLeft2, text1
     ])
 }
 
@@ -449,53 +461,58 @@ function loadScene1c1() {
         triggerElement: '#scene-1-c-1',
         offset: 50
     })
-        .setVelocity('.block-c1-1-2-cloud', { opacity: 1 }, { duration: 500 })
-;
+        .setVelocity('.block-c1-1-2-cloud', { opacity: 1 }, { duration: 500 });
 
     let lutungFall = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-1',
         offset: 100
     })
-        .setClassToggle('.lutung-fall-new', 'animated')
-;
+        .setClassToggle('.lutung-fall-new', 'animated');
 
     let lutungCrown = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-1',
         offset: 100
     })
-        .setClassToggle('.lutung-crown', 'animated')
-;
+        .setClassToggle('.lutung-crown', 'animated');
+
+    let chat1c1_1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-c-1',
+        offset: 150
+    })
+        .setClassToggle('.chat-1c1-1', 'animate-chat');
 
     let text1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-1',
         offset: 200
     })
-        .setVelocity('.scene-box-c1-text', { opacity: 1 }, { duration: 1000 })
-;
+        .setVelocity('.scene-box-c1-text', { opacity: 1 }, { duration: 1000 });
 
     let leftBlock2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-1',
         offset: 250
     })
-        .setVelocity('.scene-box-c1-2-1', { opacity: 1, left: 0 }, { duration: 1000 })
-;
+        .setVelocity('.scene-box-c1-2-1', { opacity: 1, left: 0 }, { duration: 1000 });
 
     let chatBlock2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-1',
         offset: 300
     })
-        .setClassToggle('.scene-box-c1-2-1-chat', 'animate-chat')
-;
+        .setClassToggle('.scene-box-c1-2-1-chat', 'animate-chat');
 
     let rightBlock2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-1',
         offset: 250
     })
-        .setVelocity('.scene-box-c1-2-2', { opacity: 1, left: -30 }, { duration: 1000 })
-;
+        .setVelocity('.scene-box-c1-2-2', { opacity: 1, left: -30 }, { duration: 1000 });
+
+    let cloudInfo1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-c-1',
+        offset: 250
+    })
+        .setClassToggle('.info-1c1-1', 'animate-chat');
 
     controller.addScene([
-        leftBlock1, rightBlock1, rightCloud1, lutungFall, lutungCrown, text1, leftBlock2, chatBlock2, rightBlock2
+        leftBlock1, rightBlock1, rightCloud1, lutungFall, lutungCrown, text1, leftBlock2, chatBlock2, rightBlock2, chat1c1_1, cloudInfo1
     ])
 }
 
@@ -503,60 +520,64 @@ function loadScene1c2() {
     let text1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-2'
     })
-        .setVelocity('.scene-box-c2-text', { opacity: 1 }, { duration: 1000 })
-;
+        .setVelocity('.scene-box-c2-text', { opacity: 1 }, { duration: 1000 });
 
     let leftBlock1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-2',
         offset: 100
     })
-        .setVelocity('.scene-box-c2-1-1', { opacity: 1, left: 40 }, { duration: 1000 })
-;
+        .setVelocity('.scene-box-c2-1-1', { opacity: 1, left: 40 }, { duration: 1000 });
 
     let rightBlock1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-2',
         offset: 100
     })
-        .setVelocity('.scene-box-c2-1-2', { opacity: 1, left: -30 }, { duration: 1000 })
-;
+        .setVelocity('.scene-box-c2-1-2', { opacity: 1, left: -30 }, { duration: 1000 });
 
     let bird1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-2',
         offset: 150
     })
-        .setVelocity('.box-c2-1-2-bird1', { opacity: 1, right: 10 }, { duration: 1000, delay: 500 })
-;
+        .setVelocity('.box-c2-1-2-bird1', { opacity: 1, right: 10 }, { duration: 1000, delay: 500 });
 
     let bird2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-2',
         offset: 150
     })
-        .setVelocity('.box-c2-1-2-bird2', { opacity: 1, left: 20 }, { duration: 1000, delay: 1000 })
-;
+        .setVelocity('.box-c2-1-2-bird2', { opacity: 1, left: 20 }, { duration: 1000, delay: 1000 });
 
     let leftBlock2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-2',
         offset: 300
     })
-        .setVelocity('.scene-box-c2-2-3', { opacity: 1, bottom: 0 }, { duration: 500 })
-;
+        .setVelocity('.scene-box-c2-2-3', { opacity: 1, bottom: 0 }, { duration: 500 });
+
+    let info1c2_1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-c-2',
+        offset: 350
+    })
+        .setClassToggle('.info-1c2-1', 'animate-chat');
 
     let middleBlock2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-2',
-        offset: 300
+        offset: 400
     })
-        .setVelocity('.scene-box-c2-2-4', { opacity: 1, top: -5 }, { duration: 500, delay: 250 })
-;
+        .setVelocity('.scene-box-c2-2-4', { opacity: 1, top: -5 }, { duration: 500, delay: 250 });
+
+    let chat1c2_1 = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-c-2',
+        offset: 450
+    })
+        .setClassToggle('.chat-1c2-1', 'animate-chat');
 
     let rightBlock2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-2',
-        offset: 300
+        offset: 400
     })
-        .setVelocity('.scene-box-c2-2-5', { opacity: 1, top: 50 }, { duration: 500, delay: 500 })
-;
+        .setVelocity('.scene-box-c2-2-5', { opacity: 1, top: 50 }, { duration: 500, delay: 500 });
 
     controller.addScene([
-        text1, leftBlock1, rightBlock1, bird1, bird2, leftBlock2, middleBlock2, rightBlock2
+        text1, leftBlock1, rightBlock1, bird1, bird2, leftBlock2, middleBlock2, rightBlock2, info1c2_1, chat1c2_1
     ]);
 }
 
@@ -564,54 +585,64 @@ function loadScene1c3() {
     let lutungHead = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-3'
     })
-        .setVelocity('#lutung-head', { opacity: 1, bottom: 0 }, { duration: 1000 })
-;
+        .setVelocity('#lutung-head', { opacity: 1, bottom: 0 }, { duration: 1000 });
 
     let lutungHeadChat = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-3',
         offset: 50
     })
-        .setClassToggle('.lutung-head-chat', 'animate-chat')
-;
+        .setClassToggle('.lutung-head-chat', 'animate-chat');
 
     let text1 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-3',
         offset: 200
     })
-        .setVelocity('.text-c3-1', { opacity: 1 }, { duration: 1000 })
-;
+        .setVelocity('.text-c3-1', { opacity: 1 }, { duration: 1000 });
 
     let textScene = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-3',
         offset: 300
     })
-        .setClassToggle('.text-c3-2 .narration-text', 'reveal')
-;
+        .setClassToggle('.text-c3-2 .narration-text', 'reveal');
+
+    let textLine = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-c-3',
+        offset: 300
+    })
+        .setClassToggle('.text-c3-2 .text-line-big', 'reveal');
 
     let leftCloud = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-3',
         offset: 300
     })
-        .setVelocity('.text-c3-2-left', { opacity: 1 }, { duration: 1000 })
-;
+        .setVelocity('.text-c3-2-left', { opacity: 1 }, { duration: 1000 });
 
     let rightCloud = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-3',
         offset: 300
     })
-        .setVelocity('.text-c3-2-right', { opacity: 1 }, { duration: 1000 })
-;
+        .setVelocity('.text-c3-2-right', { opacity: 1 }, { duration: 1000 });
 
     let text2 = new ScrollMagic.Scene({
         triggerElement: '#scene-1-c-3',
         offset: 400
     })
-        .setVelocity('.text-c3-3', { opacity: 1 }, { duration: 1000 })
-;
+        .setVelocity('.text-c3-3', { opacity: 1 }, { duration: 1000 });
 
     controller.addScene([
-        lutungHead, lutungHeadChat, text1, textScene, text2, leftCloud, rightCloud
+        lutungHead, lutungHeadChat, text1, textScene, text2, leftCloud, rightCloud, textLine
     ])
+}
+
+function loadScene1c4() {
+    let partTitle = new ScrollMagic.Scene({
+        triggerElement: '#scene-1-c-4'
+    })
+        .setVelocity('.part-title-container-c-1', { opacity: 1, top: 0 }, { duration: 750 });
+
+    controller.addScene([
+        partTitle
+    ]);
 }
 
 window.onload = () => {
@@ -632,6 +663,7 @@ window.onload = () => {
     loadScene1c1();
     loadScene1c2();
     loadScene1c3();
+    loadScene1c4();
 };
 
 let visualizeTweenMaxBezier = (tween, steps) => {
