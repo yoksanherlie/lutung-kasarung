@@ -657,6 +657,11 @@ function loadParallax() {
         relativeInput: true
     });
 
+    let title2 = document.getElementById('ganteng2');
+    new Parallax(title2, {
+        relativeInput: true
+    });
+
 
     let sceneCloud = document.getElementById('cloud-ganteng');
     new Parallax(sceneCloud, {

@@ -1286,3 +1286,7 @@ body {
     top: -80px;
     opacity: 0;
 }
+
+#scene-1-c-4 .part-title-container .part-title {
+    left: -270% !important;
+}
