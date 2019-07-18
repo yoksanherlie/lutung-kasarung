@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/footer.css">
     </head>
 
-    <body>
+    <body class="hidden">
 
         <header>
             <div class="container">
@@ -97,6 +97,8 @@
                             <span>t</span>
                         </span>
                     </h3>
+
+                    <label class="label-start" onclick="start()">Click to start!</label>
                 </div>
             </div>
 
@@ -113,7 +115,7 @@
                         </li>
 
                         <li>
-                            <input type="checkbox" checked id="music-check">
+                            <input type="checkbox" checked id="music-check" onclick="bindMusic()">
                             <label for="music-check">
                                 Musik
                             </label>

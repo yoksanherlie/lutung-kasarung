@@ -1,4 +1,4 @@
-let controller = null;
+let controller = null, audioBg = null;
 
 // scene a
 function loadScene1aTitle() {
@@ -674,6 +674,13 @@ function loadParallax() {
     });
 }
 
+function setupMusic() {
+    audioBg = new Audio('music/2.mpeg');
+
+    audioBg.loop = true;
+    audioBg.volume = .5;
+}
+
 window.onload = () => {
     controller = new ScrollMagic.Controller();
 
@@ -694,8 +701,26 @@ window.onload = () => {
     loadScene1c3();
     loadScene1c4();
 
-    loadParallax();
+    // loadParallax();
+    setupMusic();
 };
+
+function start() {
+    loadParallax();
+    audioBg.play();
+
+    document.querySelector('body').classList.remove('hidden');
+    document.querySelector('.label-start').classList.add('hide');
+}
+
+function bindMusic() {
+    let checkbox = document.querySelector('#music-check');
+    if (checkbox.checked) {
+        audioBg.volume = .5;
+    } else {
+        audioBg.volume = 0;
+    }
+}
 
 let visualizeTweenMaxBezier = (tween, steps) => {
     //remove any existing curve
@@ -717,4 +742,4 @@ let visualizeTweenMaxBezier = (tween, steps) => {
         });
     }
     tween.restart();
-}
+};

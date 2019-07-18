@@ -8,6 +8,10 @@ body {
     overflow-x: hidden;
 }
 
+body.hidden {
+    overflow: hidden;
+}
+
 /*  fonts  */
 @font-face {
     font-family: PermanentMarker;
@@ -149,6 +153,21 @@ body {
     to {
         -webkit-filter: blur(0);
     }
+}
+
+.scene-title .label-start {
+    font-family: KidKnowledge;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    margin-top: 40px;
+    transform: scale(0);
+    opacity: 0;
+    animation: animateChatCloud .5s forwards 3s cubic-bezier(.25, -1, .3, 2);
+}
+
+.scene-title .label-start.hide {
+    display: none;
 }
 
 /* home setting */
