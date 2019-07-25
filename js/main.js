@@ -650,11 +650,11 @@ function loadScene2d1() {
     let textScene = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-1',
     })
-        .setClassToggle('.text-d1-1', 'reveal').addIndicators();
+        .setClassToggle('.text-d1-1', 'reveal');
 
     let grass = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-1',
-    }).setVelocity('.grass-svg', { opacity: 1, top: 0 }, { duration: 750 }).addIndicators();
+    }).setVelocity('.grass-svg', { opacity: 1, top: 0 }, { duration: 750 });
 
     controller.addScene([
         textScene, grass
@@ -665,19 +665,19 @@ function loadScene2d2() {
     let castle = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-2',
     })
-        .setVelocity('.castle-svg', { opacity: 1, top: 0 }, { duration: 300 }).addIndicators();
+        .setVelocity('.castle-svg', { opacity: 1, top: 0 }, { duration: 300 });
 
     let cloud1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-2',
         offset: 200
     })
-        .setVelocity('.castle-cloud-1', { opacity: 1, left: -20 }, { duration: 500 }).addIndicators();
+        .setVelocity('.castle-cloud-1', { opacity: 1, left: -20 }, { duration: 500 });
 
     let cloud2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-2',
         offset: 200
     })
-        .setVelocity('.castle-cloud-2', { opacity: 1, right: 50 }, { duration: 500 }).addIndicators();
+        .setVelocity('.castle-cloud-2', { opacity: 1, right: 50 }, { duration: 500 });
 
     controller.addScene([
         castle, cloud1, cloud2
@@ -688,48 +688,41 @@ function loadScene2d3() {
     let block1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-3',
     })
-        .setVelocity('.scene-block-2d3-1 .block', { bottom: 0, opacity: 1 }, { duration: 500 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d3-1 .block', { bottom: 0, opacity: 1 }, { duration: 500 });
 
     let block2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-3',
     })
-        .setVelocity('.scene-block-2d3-2 .block-2d3-2-1', { top: 0, opacity: 1 }, { duration: 500, delay: 250 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d3-2 .block-2d3-2-1', { top: 0, opacity: 1 }, { duration: 500, delay: 250 });
 
     let block3 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-3',
     })
-        .setVelocity('.scene-block-2d3-2 .block-2d3-2-2', { right: 0, opacity: 1 }, { duration: 500, delay: 400 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d3-2 .block-2d3-2-2', { right: 0, opacity: 1 }, { duration: 500, delay: 400 });
 
     let chat1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-3',
         offset: 100
     })
-        .setClassToggle('.chat-2d3-1', 'animate-chat')
-        .addIndicators();
+        .setClassToggle('.chat-2d3-1', 'animate-chat');
 
     let chat2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-3',
         offset: 200
     })
-        .setClassToggle('.chat-2d3-2', 'animate-chat')
-        .addIndicators();
+        .setClassToggle('.chat-2d3-2', 'animate-chat');
 
     let chat3 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-3',
         offset: 300
     })
-        .setClassToggle('.chat-2d3-3', 'animate-chat')
-        .addIndicators();
+        .setClassToggle('.chat-2d3-3', 'animate-chat');
 
     let text1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-3',
         offset: 400
     })
-        .setVelocity('.scene-block-2d3-2 .block-text', { opacity: 1 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d3-2 .block-text', { opacity: 1 });
 
     controller.addScene([
         block1, block2, block3, chat1, chat2, chat3, text1
@@ -740,41 +733,35 @@ function loadScene2d4() {
     let text1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-4',
     })
-        .setVelocity('.scene-block-2d4 .block-text-1', { opacity: 1 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d4 .block-text-1', { opacity: 1 });
 
     let block1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-4',
     })
-        .setVelocity('.scene-block-2d4-1 .block-2d4-1-1', { bottom: 0, opacity: 1 }, { duration: 500 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d4-1 .block-2d4-1-1', { bottom: 0, opacity: 1 }, { duration: 500 });
 
     let block2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-4',
     })
-        .setVelocity('.scene-block-2d4-1 .block-2d4-1-2', { bottom: 40, opacity: 1 }, { duration: 500, delay: 250 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d4-1 .block-2d4-1-2', { bottom: 40, opacity: 1 }, { duration: 500, delay: 250 });
 
     let text2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-4',
         offset: 100
     })
-        .setVelocity('.scene-block-2d4 .block-text-2', { opacity: 1 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d4 .block-text-2', { opacity: 1 });
 
     let block3 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-4',
         offset: 200
     })
-        .setVelocity('.scene-block-2d4-2 .block-2d4-1-3', { left: 10, opacity: 1 }, { duration: 750 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d4-2 .block-2d4-1-3', { left: 10, opacity: 1 }, { duration: 750 });
 
     let chat1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-4',
         offset: 300
     })
-        .setClassToggle('.scene-block-2d4-2 .chat-cloud-new', 'animate-chat')
-        .addIndicators();
+        .setClassToggle('.scene-block-2d4-2 .chat-cloud-new', 'animate-chat');
 
     controller.addScene([
         text1, block1, block2, text2, block3, chat1
@@ -785,48 +772,41 @@ function loadScene2d5() {
     let block1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-5',
     })
-        .setVelocity('.scene-block-2d5-1 .block-2d5-1', { bottom: 0, opacity: 1 }, { duration: 500 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d5-1 .block-2d5-1', { bottom: 0, opacity: 1 }, { duration: 500 });
 
     let block2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-5',
     })
-        .setVelocity('.scene-block-2d5-1 .block-2d5-2', { bottom: 0, opacity: 1 }, { duration: 500, delay: 100 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d5-1 .block-2d5-2', { bottom: 0, opacity: 1 }, { duration: 500, delay: 100 });
 
     let block3 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-5',
     })
-        .setVelocity('.scene-block-2d5-1 .block-2d5-3', { bottom: 0, opacity: 1 }, { duration: 500, delay: 200 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d5-1 .block-2d5-3', { bottom: 0, opacity: 1 }, { duration: 500, delay: 200 });
 
     let chat1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-5',
         offset: 200
     })
-        .setClassToggle('.scene-block-2d5-1 .block-2d5-1 .chat-cloud-new', 'animate-chat')
-        .addIndicators();
+        .setClassToggle('.scene-block-2d5-1 .block-2d5-1 .chat-cloud-new', 'animate-chat');
 
     let chat2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-5',
         offset: 200
     })
-        .setClassToggle('.scene-block-2d5-1 .block-2d5-2 .chat-cloud-new', 'animate-chat')
-        .addIndicators();
+        .setClassToggle('.scene-block-2d5-1 .block-2d5-2 .chat-cloud-new', 'animate-chat');
 
     let block4 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-5',
         offset: 300
     })
-        .setVelocity('.scene-block-2d5-2', { left: -115, opacity: 1 }, { duration: 750 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d5-2', { left: -115, opacity: 1 }, { duration: 750 });
 
     let text1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-5',
         offset: 300
     })
-        .setVelocity('.scene-block-2d5-3', { opacity: 1 }, { duration: 500, delay: 300 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d5-3', { opacity: 1 }, { duration: 500, delay: 300 });
 
     controller.addScene([
         block1, block2, block3, chat1, chat2, block4, text1
@@ -837,70 +817,60 @@ function loadScene2d6() {
     let block1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
     })
-        .setVelocity('.scene-block-2d6-1', { bottom: 0, opacity: 1 }, { duration: 500 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d6-1', { bottom: 0, opacity: 1 }, { duration: 500 });
 
     let block2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
     })
-        .setVelocity('.scene-block-2d6-2 .scene-block-2d6-2-1 .block', { top: 0, opacity: 1 }, { duration: 500 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d6-2 .scene-block-2d6-2-1 .block', { top: 0, opacity: 1 }, { duration: 500 });
 
     let text1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
         offset: 100
     })
-        .setVelocity('.scene-block-2d6-2 .scene-block-2d6-2-1 .block-text', { opacity: 1 }, { duration: 500, delay: 200 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d6-2 .scene-block-2d6-2-1 .block-text', { opacity: 1 }, { duration: 500, delay: 200 });
 
     let block3 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
         offset: 150
     })
-        .setVelocity('.scene-block-2d6-2 .block-flex-1', { bottom: 0, opacity: 1 }, { duration: 500 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d6-2 .block-flex-1', { bottom: 0, opacity: 1 }, { duration: 500 });
 
     let block4 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
         offset: 150
     })
-        .setVelocity('.scene-block-2d6-2 .block-flex-2', { right: 0, opacity: 1 }, { duration: 500 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d6-2 .block-flex-2', { right: 0, opacity: 1 }, { duration: 500 });
 
     let text2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
         offset: 150
     })
-        .setVelocity('.scene-block-2d6-2 .scene-block-2d6-2-2 .block-text', { opacity: 1 }, { duration: 500 })
-        .addIndicators();
+        .setVelocity('.scene-block-2d6-2 .scene-block-2d6-2-2 .block-text', { opacity: 1 }, { duration: 500 });
 
     let chat1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
         offset: 50
     })
-        .setClassToggle('.ccn-2d6-1', 'animate-chat')
-        .addIndicators();
+        .setClassToggle('.ccn-2d6-1', 'animate-chat');
 
     let chat2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
         offset: 100
     })
-        .setClassToggle('.ccn-2d6-2', 'animate-chat')
-        .addIndicators();
+        .setClassToggle('.ccn-2d6-2', 'animate-chat');
 
     let chat3 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
         offset: 150
     })
-        .setClassToggle('.ccn-2d6-3', 'animate-chat')
-        .addIndicators();
+        .setClassToggle('.ccn-2d6-3', 'animate-chat');
 
     let chat4 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
         offset: 200
     })
-        .setClassToggle('.ccn-2d6-4', 'animate-chat')
-        .addIndicators();
+        .setClassToggle('.ccn-2d6-4', 'animate-chat');
 
     controller.addScene([
         block1, block2, text1, block3, block4, text2, chat1, chat2, chat3, chat4
@@ -912,13 +882,13 @@ function loadScene2d7() {
         triggerElement: '#scene-2-d-7',
         offset: 200
     })
-        .setVelocity('.text-d7-1', { opacity: 1, top: 300 }, { duration: 500 }).addIndicators();
+        .setVelocity('.text-d7-1', { opacity: 1, top: 300 }, { duration: 500 });
 
     let textScene = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-7',
         offset: 250
     })
-        .setClassToggle('.text-d7-2', 'reveal').addIndicators();
+        .setClassToggle('.text-d7-2', 'reveal');
 
     controller.addScene([
         text1, textScene
@@ -929,18 +899,18 @@ function loadScene2d8() {
     let cloud1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-8',
     })
-        .setVelocity('.cloud-end-right', { opacity: 1, right: 0 }, { duration: 500 }).addIndicators();
+        .setVelocity('.cloud-end-right', { opacity: 1, right: 0 }, { duration: 500 });
 
     let cloud2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-8',
     })
-        .setVelocity('.cloud-end-left', { opacity: 1, left: 0 }, { duration: 500 }).addIndicators();
+        .setVelocity('.cloud-end-left', { opacity: 1, left: 0 }, { duration: 500 });
 
     let textEnd = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-8',
         offset: 300
     })
-        .setClassToggle('.next-title', 'reveal').addIndicators();
+        .setClassToggle('.next-title', 'reveal');
 
     controller.addScene([
         cloud1, cloud2, textEnd
@@ -985,8 +955,6 @@ function setupMusic() {
 
     audioBg.loop = true;
     audioBg.volume = .5;
-
-    window.scrollTo(0, 0);
 }
 
 window.onload = () => {
@@ -1020,6 +988,10 @@ window.onload = () => {
 
     // loadParallax();
     setupMusic();
+};
+
+window.onbeforeunload = () => {
+    window.scrollTo(0, 0);
 };
 
 function start() {
