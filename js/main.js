@@ -724,8 +724,14 @@ function loadScene2d3() {
     })
         .setVelocity('.scene-block-2d3-2 .block-text', { opacity: 1 });
 
+    let grass = new ScrollMagic.Scene({
+        triggerElement: '#scene-2-d-3',
+        offset: 300
+    })
+        .setVelocity('.grass-2d-1', { right: 0, opacity: 1 }, { duration: 300 });
+
     controller.addScene([
-        block1, block2, block3, chat1, chat2, chat3, text1
+        block1, block2, block3, chat1, chat2, chat3, text1, grass
     ])
 }
 
@@ -763,8 +769,14 @@ function loadScene2d4() {
     })
         .setClassToggle('.scene-block-2d4-2 .chat-cloud-new', 'animate-chat');
 
+    let grass = new ScrollMagic.Scene({
+        triggerElement: '#scene-2-d-4',
+        offset: 300
+    })
+        .setVelocity('.grass-2d-2', { left: 0, opacity: 1 }, { duration: 300 });
+
     controller.addScene([
-        text1, block1, block2, text2, block3, chat1
+        text1, block1, block2, text2, block3, chat1, grass
     ]);
 }
 
@@ -808,8 +820,14 @@ function loadScene2d5() {
     })
         .setVelocity('.scene-block-2d5-3', { opacity: 1 }, { duration: 500, delay: 300 });
 
+    let grass = new ScrollMagic.Scene({
+        triggerElement: '#scene-2-d-5',
+        offset: 300
+    })
+        .setVelocity('.grass-2d-3', { right: 0, opacity: 1 }, { duration: 300 });
+
     controller.addScene([
-        block1, block2, block3, chat1, chat2, block4, text1
+        block1, block2, block3, chat1, chat2, block4, text1, grass
     ])
 }
 
@@ -822,7 +840,7 @@ function loadScene2d6() {
     let block2 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
     })
-        .setVelocity('.scene-block-2d6-2 .scene-block-2d6-2-1 .block', { top: 0, opacity: 1 }, { duration: 500 });
+        .setVelocity('.scene-block-2d6-2 .scene-block-2d6-2-1 .block', { top: 0, opacity: 1 }, { duration: 500, delay: 100 });
 
     let text1 = new ScrollMagic.Scene({
         triggerElement: '#scene-2-d-6',
@@ -991,7 +1009,7 @@ window.onload = () => {
 };
 
 window.onbeforeunload = () => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 };
 
 function start() {

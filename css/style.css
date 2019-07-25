@@ -9,7 +9,7 @@ body {
 }
 
 body.hidden {
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 /*  fonts  */
@@ -1410,6 +1410,15 @@ body.hidden {
     width: 1000px;
 }
 
+#scene-2-d-3 .grass-right,
+#scene-2-d-5 .grass-right {
+    position: absolute;
+    right: -100px;
+    bottom: -50px;
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
 #scene-2-d-3 .scene-block-2d3 .block {
     position: relative;
 }
@@ -1507,6 +1516,13 @@ body.hidden {
 /* scene 2 d 4 */
 #scene-2-d-4 {
     height: 75vh;
+}
+
+#scene-2-d-4 .grass-left {
+    position: absolute;
+    left: -100px;
+    bottom: -50px;
+    opacity: 0;
 }
 
 #scene-2-d-4 .scene-block-2d4 {
